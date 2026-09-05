@@ -1,0 +1,10 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Team extends Model
+{
+    protected $fillable = ['name','designation','fb_url','tw_url','in_url','image','status'];
+}
