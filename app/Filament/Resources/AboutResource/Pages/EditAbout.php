@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Filament\Resources\TeamResource\Pages;
+namespace App\Filament\Resources\AboutResource\Pages;
 
-use App\Filament\Resources\TeamResource;
+use App\Filament\Resources\AboutResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 use Filament\Notifications\Notification;
 
-class EditTeam extends EditRecord
+class EditAbout extends EditRecord
 {
-    protected static string $resource = TeamResource::class;
+    protected static string $resource = AboutResource::class;
 
     protected function getHeaderActions(): array
     {
@@ -18,7 +18,7 @@ class EditTeam extends EditRecord
         ];
     }
 
-    protected function getRedirectUrl(): string
+     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');
     }
@@ -27,7 +27,7 @@ class EditTeam extends EditRecord
 
         return Notification::make()
         ->success()
-        ->title('Team Updated')
-        ->body('The Team has been Updated successfully.');
+        ->title('About Updated')
+        ->body('The About has been Updated successfully.');
     }
 }
