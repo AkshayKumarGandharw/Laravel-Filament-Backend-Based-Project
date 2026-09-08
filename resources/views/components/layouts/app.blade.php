@@ -98,7 +98,7 @@
 					<ul class="list-unstyled">
 						<li class="list-inline-item me-4"><a wire:navigate class="text-black" href="{{route('policy')}}">Privacy Policy</a>
                         </li>
-						<li class="list-inline-item me-4"><a class="text-black" href="terms.html">Terms &amp; Conditions</a>
+						<li class="list-inline-item me-4"><a wire:navigate class="text-black" href="{{route('terms')}}">Terms &amp; Conditions</a>
                         </li>
 					</ul>
 				</div>
