@@ -9,6 +9,8 @@ use App\Livewire\ShowArticle;
 use App\Livewire\ShowArticleDetail;
 use App\Livewire\ShowContact;
 use App\Livewire\About;
+use App\Livewire\ShowPrivacyPolicy;
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -21,6 +23,7 @@ Route::get('/articles',ShowArticle::class)->name('articlesPage');
 Route::get('/article-details/{id}',ShowArticleDetail::class)->name('showArticleDetail');
 Route::get('/contact',ShowContact::class)->name('showContact');
 Route::get('/about',About::class)->name('about');
+Route::get('/privacy',ShowPrivacyPolicy::class)->name('policy');
 
 
 

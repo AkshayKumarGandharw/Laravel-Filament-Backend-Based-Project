@@ -67,16 +67,12 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">Service</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="service-details.html">Digital Marketing</a>
+						@foreach(getService() as $service)
+
+						<li class="mb-2"><a href="{{route('showServiceDetail',$service->id)}}">{{$service->title}}</a>
 						</li>
-						<li class="mb-2"><a href="service-details.html">Web Design</a>
-						</li>
-						<li class="mb-2"><a href="service-details.html">Logo Design</a>
-						</li>
-						<li class="mb-2"><a href="service-details.html">Graphic Design</a>
-						</li>
-						<li class="mb-2"><a href="service-details.html">SEO</a>
-						</li>
+
+						@endforeach
 					</ul>
 				</div>
 				
@@ -100,7 +96,7 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">Other Links</h5>
 					<ul class="list-unstyled">
-						<li class="list-inline-item me-4"><a class="text-black" href="privacy-policy.html">Privacy Policy</a>
+						<li class="list-inline-item me-4"><a wire:navigate class="text-black" href="{{route('policy')}}">Privacy Policy</a>
                         </li>
 						<li class="list-inline-item me-4"><a class="text-black" href="terms.html">Terms &amp; Conditions</a>
                         </li>
