@@ -33,7 +33,7 @@
 <header class="navigation bg-tertiary">
 	<nav class="navbar navbar-expand-xl navbar-light text-center py-3">
 		<div class="container">
-			<a class="navbar-brand" href="{{route('home')}}">
+			<a class="navbar-brand" wire:navigate href="{{route('home')}}">
 				<img loading="prelaod" decoding="async" class="img-fluid" width="160" src="{{asset('/front/images/logo.png')}}" alt="Wallet">
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
@@ -69,7 +69,7 @@
 					<ul class="list-unstyled">
 						@foreach(getService() as $service)
 
-						<li class="mb-2"><a href="{{route('showServiceDetail',$service->id)}}">{{$service->title}}</a>
+						<li class="mb-2"><a wire:navigate href="{{route('showServiceDetail',$service->id)}}">{{$service->title}}</a>
 						</li>
 
 						@endforeach
@@ -81,13 +81,13 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">Quick Links</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="{{route('about')}}">About Us</a>
+						<li class="mb-2"><a wire:navigate href="{{route('about')}}">About Us</a>
 						</li>
-						<li class="mb-2"><a href="{{route('showContact')}}">Contact Us</a>
+						<li class="mb-2"><a wire:navigate href="{{route('showContact')}}">Contact Us</a>
 						</li>
-						<li class="mb-2"><a href="{{route('articlesPage')}}">Blog</a>
+						<li class="mb-2"><a wire:navigate href="{{route('articlesPage')}}">Blog</a>
 						</li>
-						<li class="mb-2"><a href="{{route('showTeams')}}">Team</a>
+						<li class="mb-2"><a wire:navigate href="{{route('showTeams')}}">Team</a>
 						</li>
 					</ul>
 				</div>
